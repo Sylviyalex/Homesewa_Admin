@@ -1,0 +1,7 @@
+npm install react-router-dom
+
+npm install jspdf html2canvas
+
+npm install @react-native-picker/picker
+
+npm install qrcode.react react-icons
