@@ -71,18 +71,18 @@ export default function AddUserBooking() {
       setLoading(true);
 
       await createManualBooking({
-        name: form.name.trim(),
-        email: form.email.trim() || null,
-        phone: form.phone.trim(),
-        serviceId: Number(form.serviceId),
+      name: form.name.trim(),
+      email: form.email.trim() || null,
+      phone: form.phone.trim(),
+      serviceId: Number(form.serviceId),
 
-        address: [form.location.trim(), form.address.trim()]
-          .filter(Boolean)
-          .join(', '), // ✅ backend expects address
+      address: [form.location.trim(), form.address.trim()]
+        .filter(Boolean)
+        .join(', '), // ✅ backend expects address
 
-        scheduledAt: new Date(form.date).toISOString(),
-        description: form.notes.trim(),
-      });
+      scheduledAt: new Date(form.date).toISOString(),
+      description: form.notes.trim(),
+    });
 
       alert('User added and service booked successfully');
 
