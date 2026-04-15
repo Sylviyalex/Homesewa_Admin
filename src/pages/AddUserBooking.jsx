@@ -75,9 +75,11 @@ export default function AddUserBooking() {
         email: form.email.trim() || null,
         phone: form.phone.trim(),
         serviceId: Number(form.serviceId),
-        customAddress: [form.location.trim(), form.address.trim()]
+
+        address: [form.location.trim(), form.address.trim()]
           .filter(Boolean)
-          .join(', '),
+          .join(', '), // ✅ backend expects address
+
         scheduledAt: new Date(form.date).toISOString(),
         description: form.notes.trim(),
       });
