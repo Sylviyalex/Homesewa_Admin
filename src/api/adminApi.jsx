@@ -33,7 +33,7 @@ export const loginAdmin = (payload) => api.post('/api/auth/login', payload);
 // BOOKINGS
 // ==========================
 export const createManualBooking = (payload) =>
-  api.post('/api/admin/bookings/manual', payload);
+  api.post('/api/bookings/admin/create', payload);
 
 export const getBookings = (params = {}) =>
   api.get('/api/admin/bookings', { params });
